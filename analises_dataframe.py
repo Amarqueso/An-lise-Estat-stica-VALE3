@@ -29,7 +29,7 @@ data_min = df.loc[df['Fechamento'].idxmin(),'Data']
 print(f'Preço máximo de R${preco_max:.2f} na data {data_max} e mínimo de R${preco_min:.2f} na data {data_min} das ações da companhia Vale.')
 print(f'No perído de {df['Data'][len(df['Data'])-1]} à {df['Data'][0]}.')
 
-##3) Se um investidor tivesse adquirido 2000 ações da Vale no 10° dia do período, qual seria o valor total dos papéis no 70° dia do  investimento? O investidor teria lucro ou prejuízo? De quantos reais?
+##3) Se um investidor tivesse adquirido uma certa quantidade de ações da Vale em um certo dia do período, qual seria o valor total dos papéis em outro dia do investimento? O investidor teria lucro ou prejuízo? De quantos reais?
 
 # Criando uma função para o cálculo da diferença de preço e se houve lucro ou prejuízo.
 
