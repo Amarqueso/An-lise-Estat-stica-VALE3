@@ -33,9 +33,10 @@ print(f'No perído de {df['Data'][len(df['Data'])-1]} à {df['Data'][0]}.')
 
 # Criando uma função para o cálculo da diferença de preço e se houve lucro ou prejuízo.
 
-qtd_adquirida = 2000
-dia_compra = 10
-dia_venda = 70
+qtd_adquirida = int(input("Insira a quantidade de ações adquiridas: "))
+print(f'Período de: {len(df['Data'])} dias.')
+dia_compra = int(input("\nInsira o número do dia válido da compra a partir do primeiro: "))
+dia_venda = int(input("\nInsira o número do dia válido da venda a partir do primeiro: "))
 
 def calculo_difenca_preco():
     if dia_venda > dia_compra:
@@ -46,6 +47,9 @@ def calculo_difenca_preco():
             return print(f'O cliente teve um lucro de R${diferenca_preco:.2f}.')
         else:
             return print(f'O cliente teve um prejuízo de R${(-1)*diferenca_preco:.2f}.')
+    elif dia_venda or dia_compra > len(df['Data']):
+        print("Dia inválido.")
+
     else: print("Dia inválido.")
     
 calculo_difenca_preco()
